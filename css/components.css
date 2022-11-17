@@ -62,11 +62,11 @@
  }
  .card{
 	display: grid;
-	grid-template-columns: 1fr 2fr;
-	background: #FFFFFF;
-	border: 1px solid #E5E8ED;
+	grid-template-columns: minmax(auto,214px) 1fr;
+	border: 1px solid #e5e8ed;
 	box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
 	border-radius: 4px;
+	padding-right: 5px;
 	transition: all 0.4s ease 0s;
  }
 @media (any-hover: hover){
@@ -77,7 +77,7 @@
 }
 .card__avatar { 
 	position: relative;
-	padding-bottom: 85%;
+	padding-bottom: 100%;
 }
 .card__avatar img{
 	position: absolute;
@@ -142,8 +142,10 @@
 	color:#787A80;
 	margin-right: 8px;
 }
-@media (max-width: 945px){
-	.card{
-		grid-template-columns: 1fr;
+
+@media(max-width:457px){
+	.card__content{
+		justify-items: center;
+		text-align: center;
 	}
 }

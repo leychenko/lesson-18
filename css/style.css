@@ -429,13 +429,11 @@ body {
     padding: 70px 0;
   }
   .who-we-are__container {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     row-gap: 20px;
-    justify-content: center;
+    justify-items: center;
   }
-  .who-we-are__content {
-    justify-self: center;
-  }
+ 
 }
 @media (max-width: 425px) {
   .decor-who-we-are {
@@ -463,11 +461,24 @@ body {
 .block-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr;
   gap: 30px;
 }
 @media (max-width: 1140px) {
   .block-cards {
     gap: 15px;
   }
+}
+@media (max-width: 920px){
+	  .block-cards{
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-auto-rows: 1fr;
+		gap: 30px;
+	  }
+}
+@media (max-width: 680px){
+	.ready-to-learn__button{
+		display: none;
+	}
 }
